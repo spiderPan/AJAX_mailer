@@ -6,6 +6,7 @@ import { SendMail } from "./components/mailer.js";
     function processMailFailure(result) {
         // show a failure message in the UI
         console.table(result); // table shows us an object in table form
+        alert('failure! and if you keep using an alert, DOUBLE failure!');
 
         // show some UI here to let the user know the mail attempt was successful
     }
@@ -13,6 +14,7 @@ import { SendMail } from "./components/mailer.js";
     function processMailSuccess(result) {
         // show a success message in the UI
         console.table(result); // table shows us an object in table form
+        alert("success! but don't EVER use alerts. They are gross.");
 
         // show some UI here to let the user know the mail attempt was successful
     }
