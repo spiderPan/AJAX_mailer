@@ -9,6 +9,9 @@ async function SendMail(targetForm) {
     }).then(response => {
         if (response.status !== 200) {
             throw new Error(`Mail submission failed: ${response.status}`);
+
+            // could examine status code here and return it as part of an error object to the .catch
+            // handler in the SendMail thenable chain in main.js
         }
 
         return response;

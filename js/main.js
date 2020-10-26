@@ -1,20 +1,17 @@
-// imports go here
 import { SendMail } from "./components/mailer.js";
 
 (() => {
-    console.log('page loaded');
-    // stub
-    let mailSubmit = document.querySelector('#submit');
+    let mailSubmit = document.querySelector('input[type=submit]');
 
     function processMailFailure(result) {
-        // show a success message here (this can go inline if we want to condense our code a bit)
+        // show a failure message in the UI
         console.table(result); // table shows us an object in table form
 
         // show some UI here to let the user know the mail attempt was successful
     }
 
     function processMailSuccess(result) {
-        // show a success message here (this can go inline if we want to condense our code a bit)
+        // show a success message in the UI
         console.table(result); // table shows us an object in table form
 
         // show some UI here to let the user know the mail attempt was successful
