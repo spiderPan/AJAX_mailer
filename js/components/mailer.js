@@ -4,6 +4,9 @@ async function SendMail(targetForm) {
 
     let result = await fetch(`./includes/${targetForm.getAttribute("action")}`, {
         method: targetForm.method,
+        headers: {
+            "Content-type":"application/x-www-form-urlencoded"
+        },
         // could include headers here but they're breaking my Fetch call
         body: formData
     }).then(response => {
