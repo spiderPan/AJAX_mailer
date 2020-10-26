@@ -1,4 +1,4 @@
-# Using AJAX with POST and Email
+# Email with AJAX
 
 This is a sample project using AJAX to handle mail submission. It's implemented with async / await and imported into the main JavaScript file as a module / component.
 
