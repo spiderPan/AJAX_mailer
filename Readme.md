@@ -15,5 +15,5 @@ CSS is generated with SASS using the command line tools. You'll need dart-sass (
 ## Credits
 TVR - this is a stripped-down example of async / await and API endpoint testing for Authoring Level 3. Not for production. Demo only!
 
-## Licens
+## License
 MIT
