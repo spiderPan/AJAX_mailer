@@ -2,11 +2,11 @@
 import { SendMail } from "./components/mailer.js";
 
 (() => {
+    console.log('page loaded');
     // stub
-    let mailSubmit = document.querySelector('input[type=submit]');
+    let mailSubmit = document.querySelector('#submit');
 
     function processMailFailure(result) {
-        debugger;
         // show a success message here (this can go inline if we want to condense our code a bit)
         console.table(result); // table shows us an object in table form
 
@@ -14,7 +14,6 @@ import { SendMail } from "./components/mailer.js";
     }
 
     function processMailSuccess(result) {
-        debugger;
         // show a success message here (this can go inline if we want to condense our code a bit)
         console.table(result); // table shows us an object in table form
 
@@ -22,7 +21,6 @@ import { SendMail } from "./components/mailer.js";
     }
 
     function processMail(event) {
-        debugger;
         // block the default submit behaviour
         event.preventDefault();
 

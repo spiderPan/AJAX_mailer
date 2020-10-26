@@ -1,24 +1,12 @@
 async function SendMail(targetForm) {
-    debugger;
     // mail stuff goes here
-    let formData = new FormData(targetForm),
-        mailData = {};
+    let formData = new FormData(targetForm);
 
-    // set up the mail data -> loop thru the iterable and populate the mailData object
-    for (let [key, value] of formData.entries()) {
-        mailData[key] = value;
-    }
-
-
-    let result = await fetch(`./includes/index.php`, {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json'
-            //'Content-Type': 'application/x-www-form-urlencoded',
-          },
-        body: JSON.stringify(mailData)
+    let result = await fetch(`./includes/${targetForm.getAttribute("action")}`, {
+        method: targetForm.method,
+        // could include headers here but they're breaking my Fetch call
+        body: formData
     }).then(response => {
-        debugger;
         if (response.status !== 200) {
             throw new Error(`Mail submission failed: ${response.status}`);
         }
@@ -27,8 +15,6 @@ async function SendMail(targetForm) {
     })
 
     let mailStatus = await result.json();
-
-    debugger;
 
     return mailStatus;
 }
