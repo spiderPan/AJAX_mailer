@@ -11,7 +11,7 @@ async function SendMail(targetForm) {
     let result = await fetch(`./includes/${targetForm.getAttribute("action")}`, {
         method: targetForm.method,
         headers: {
-            "Content-type":"application/x-www-form-urlencoded"
+            "Content-type": "application/x-www-form-urlencoded"
         },
         // TODO: a GET request doesn't use body, so this member should be conditional
         body: formData

@@ -9,12 +9,14 @@ label {
     }
 }
 
-input[type=text], input[type=email] {
+input[type=text], input[type=email], textarea {
     padding: 0.6em;
     color: #333;
     border-radius: 4px;
     width: 250px;
 }
+
+textarea { resize: none; }
 
 input[type=submit] {
     display: block;
