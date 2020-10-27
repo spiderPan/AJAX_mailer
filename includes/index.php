@@ -4,9 +4,7 @@
 
     if(empty($_POST["email"])) {
         header('HTTP/1.1 488 You Did NOT Include Your Email');
-        //header('Content-Type: application/json; charset=UTF-8');
         die(json_encode(["message" => "form submission failed"]));
-        //throw new Exception("email was not set");
         
     } else {
         echo json_encode(["message" => "this is a test message. Your name is " . $_POST["firstname"] ." and your email is " . $_POST["email"]]);

@@ -10,11 +10,8 @@ async function SendMail(targetForm) {
 
     let result = await fetch(`./includes/${targetForm.getAttribute("action")}`, {
         method: targetForm.method,
-        // headers: {
-        //     "Content-type": "application/x-www-form-urlencoded"
-        // },
         // TODO: a GET request doesn't use body, so this member should be conditional
-        body: formData
+        body: formData,
     }).then(response => {
         if (response.status !== 200) {
             throw new Error(`Mail submission failed: ${response.status}`);
