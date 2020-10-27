@@ -2,7 +2,7 @@
 
 This is a sample project using AJAX to handle mail submission. It's implemented with async / await and imported into the main JavaScript file as a module / component.
 
-There's a (very) simple form that sends a user's first name, last name and email to an API endpoint; it has some extremely simple success / failure handling.
+There's a (very) simple form that sends a user's first name, last name, email and message to an API endpoint; it has some extremely simple success / failure handling.
 
 ## Installation
 Clone the repo to your local dev environment. This uses PHP on the back end, so you'll need something like WAMP or MAMP to run it (alternatively configure a Docker project and run it that way).
