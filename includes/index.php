@@ -3,7 +3,7 @@
     // this is just a placeholder file
 
     if(empty($_POST["email"])) {
-        header('HTTP/1.1 500 Internal Server Booboo');
+        header('HTTP/1.1 488 You Did NOT Include Your Email');
         //header('Content-Type: application/json; charset=UTF-8');
         die(json_encode(["message" => "form submission failed"]));
         //throw new Exception("email was not set");
