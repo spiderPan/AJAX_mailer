@@ -7,6 +7,9 @@ There's a (very) simple form that sends a user's first name, last name, email an
 ## Installation
 Clone the repo to your local dev environment. This uses PHP on the back end, so you'll need something like WAMP or MAMP to run it (alternatively configure a Docker project and run it that way).
 
+## Docker
+Run `docker-compose up` and then visit the site in localhost:3040
+
 ## Usage
 Pretty straightforward - navigate to the live instance and try submitting an email. The endpoint isn't connected to an API at this point - just a simple POST check and it returns back a success or error message, depending on the outcome.
 
